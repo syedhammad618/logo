@@ -1,0 +1,196 @@
+body {
+  /* background-color: black; */
+  width: 100%;
+  height: 100vh;
+}
+.check {
+  font-size: x-large;
+}
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+
+  animation: fill-name 5s ease forwards 2.7s;
+}
+
+#logo path:nth-child(1) {
+  stroke-dasharray: 312.3149719238281;
+  stroke-dashoffset: 312.3149719238281;
+  animation: line-anim 2s ease forwards;
+}
+
+#logo path:nth-child(2) {
+  stroke-dasharray: 143.66493225097656;
+  stroke-dashoffset: 143.66493225097656;
+  animation: line-anim 2s ease forwards;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 78.5911636352539;
+  stroke-dashoffset: 78.5911636352539;
+  animation: line-anim 2s ease forwards 0.3s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 138.56600952148438;
+  stroke-dashoffset: 138.56600952148438;
+  animation: line-anim 2s ease forwards 0.6s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 100.60896301269531;
+  stroke-dashoffset: 100.60896301269531;
+  animation: line-anim 2s ease forwards 0.9s;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 138.56752014160156;
+  stroke-dashoffset: 138.56752014160156;
+  animation: line-anim 2s ease forwards 1.2s;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 182.58758544921875;
+  stroke-dashoffset: 182.58758544921875;
+  animation: line-anim 2s ease forwards 1.5s;
+}
+#logo path:nth-child(8) {
+  stroke-dasharray: 78.59127044677734;
+  stroke-dashoffset: 78.59127044677734;
+  animation: line-anim 2s ease forwards 1.8s;
+}
+#logo path:nth-child(9) {
+  stroke-dasharray: 138.56614685058594;
+  stroke-dashoffset: 138.56614685058594;
+  animation: line-anim 2s ease forwards 2.1s;
+}
+#logo path:nth-child(10) {
+  stroke-dasharray: 185.6782989501953;
+  stroke-dashoffset: 185.6782989501953;
+  animation: line-anim 2s ease forwards 2.4s;
+}
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-name {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: white;
+  }
+}
+body {
+  background: rgb(163, 73, 247);
+  background-image: radial-gradient(
+    circle,
+    rgb(163, 73, 247),
+    rgb(133, 57, 204),
+    
+    rgb(102, 0, 150)
+  );
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+}
+.circle-container {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-container:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  bottom: 0;
+  opacity: 0.4;
+  left: 50%;
+  animation: shadow 2s linear infinite;
+}
+.circle-container:nth-child(2):after {
+  animation-delay: -0.3s;
+}
+.circle-container:nth-child(3):after {
+  animation-delay: -0.6s;
+}
+.circle {
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  position: absolute;
+  animation: anim 2s linear infinite;
+}
+.circle-container:nth-child(2) .circle {
+  animation-delay: -0.3s;
+}
+.circle-container:nth-child(3) .circle {
+  animation-delay: -0.6s;
+}
+@keyframes anim {
+  0% {
+    transform-origin: 400% 50%;
+  }
+  50% {
+    transform: rotate(360deg);
+    transform-origin: 400% 50%;
+  }
+  50.1% {
+    transform: rotate(0);
+    transform-origin: -300% 50%;
+  }
+  100% {
+    transform: rotate(-360deg);
+    transform-origin: -300% 50%;
+  }
+}
+@keyframes shadow {
+  0% {
+  }
+  12.5% {
+    transform: translate(50px) scale(0.6);
+  }
+  25% {
+    transform: translate(120px);
+  }
+  37.5% {
+    transform: translate(50px) scale(1.4);
+  }
+  50% {
+    transform: translate(0px);
+  }
+  62.5% {
+    transform: translate(-50px) scale(0.6);
+  }
+  75% {
+    transform: translate(-120px);
+  }
+  87.5% {
+    transform: translate(-50px) scale(1.4);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
